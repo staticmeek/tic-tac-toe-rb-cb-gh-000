@@ -10,6 +10,10 @@ WIN_COMBINATIONS = [
 ]
 
 def display_board(board)
+<<<<<<< HEAD
+=======
+  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+>>>>>>> 737f6ea24ca1b09291522541a38aeda21b276c6d
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
@@ -22,6 +26,10 @@ user_input.to_i - 1
 end
 
 def move(board, index, value)
+<<<<<<< HEAD
+=======
+  current_player(board)
+>>>>>>> 737f6ea24ca1b09291522541a38aeda21b276c6d
   board[index] = value
 end
 
@@ -38,10 +46,17 @@ def valid_move?(board, index)
 end
 
 def turn(board)
+<<<<<<< HEAD
   puts "Please enter 1-9:"
   index = gets.strip
   index = input_to_index(index)
   value = current_player(board)
+=======
+  value = ""
+  puts "Please enter 1-9:"
+  index = gets.strip
+  index = input_to_index(index)
+>>>>>>> 737f6ea24ca1b09291522541a38aeda21b276c6d
   if valid_move?(board, index) == true
     move(board, index, value)
   else
@@ -61,9 +76,15 @@ end
 
 def current_player(board)
   if turn_count(board) % 2 == 0
+<<<<<<< HEAD
     value = "X"
   else
     value = "O"
+=======
+    player = "X"
+  else
+    player = "O"
+>>>>>>> 737f6ea24ca1b09291522541a38aeda21b276c6d
   end
 end
 
@@ -106,7 +127,11 @@ def draw?(board)
 end
 
 def over?(board)
+<<<<<<< HEAD
   if won?(board) || full?(board) || draw?(board)
+=======
+  if (won?(board)) || (full?(board)) || (draw?(board))
+>>>>>>> 737f6ea24ca1b09291522541a38aeda21b276c6d
      true
   else
      false
@@ -123,10 +148,13 @@ def play(board)
   until over?(board)
     turn(board)
   end
+<<<<<<< HEAD
   if won?(board)
     puts "Congratulations #{winner(board)}!"
   else draw?(board)
     puts "Cat's Game!"
   end
 
+=======
+>>>>>>> 737f6ea24ca1b09291522541a38aeda21b276c6d
 end
